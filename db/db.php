@@ -25,7 +25,8 @@ class db
 	function conexion()
 	{
 
-		$connectionInfo = array("Database"=>$this->database, "UID" => $this->usuario,"PWD" => $this->password,"CharacterSet" => "UTF-8");
+		$connectionInfo = array("Database"=>$this->database, "UID" => $this->usuario,"PWD" => $this->password,"CharacterSet" => "UTF-8", "Encrypt" => false,
+    		"TrustServerCertificate" => true );
 		$cid = sqlsrv_connect($this->servidor, $connectionInfo); //returns false
 		if( $cid === false )
 			{
