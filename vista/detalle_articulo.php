@@ -372,7 +372,7 @@
         $('#txt_id').val(response[0].id_A);        
         $('#txt_idA_img').val(response[0].id_A);
         $('#txt_observacion').val(response[0].OBSERVACION);
-      	$("#img_articulo").attr("src","https://corsinf.com:447/repositorio_puce/?nombre="+response[0].IMAGEN);
+      	$("#img_articulo").attr("src","https://corsinf.com:447/PuceV2/repositorio_puce.php?nombre="+response[0].IMAGEN);
         $('#txt_nom_img').val(response[0].tag_s);
         $('#txt_cant').val(response[0].QUANTY);
         $('#txt_unidad').val(response[0].BASE_UOM);
