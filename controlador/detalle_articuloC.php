@@ -279,7 +279,7 @@ class detalle_articuloC
 		$datos1[1]['campo']='DESCRIPT';
 		$datos1[1]['dato']=$parametros['desc'];
 		$datos1[2]['campo']='DESCRIPT2';
-		$datos1[2]['dato']=$parametros['movimiento']; //$parametros['des2'];
+		$datos1[2]['dato']=$parametros['des2'];
 		$datos1[3]['campo']='SERIE';
 		$datos1[3]['dato']=$parametros['seri'];
 		$datos1[4]['campo']='FECHA_INV_DATE';
