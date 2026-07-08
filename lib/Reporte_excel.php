@@ -312,7 +312,7 @@ class Reporte_excel
 		$sheet->setCellValue('A'.$count,$value['COMPANYCODE']);
 		$sheet->setCellValue('B'.$count,$value['TAG_SERIE']);
 		$sheet->setCellValue('C'.$count,$value['SUBNUMBER']);
-		$sheet->setCellValue('D'.$count,utf8_decode($value['DESCRIPT']));
+		$sheet->setCellValue('D'.$count,$value['DESCRIPT']);
 		$sheet->setCellValue('E'.$count,$value['DESCRIPT2']);
 		$sheet->setCellValue('F'.$count,$value['MODELO']);		
 		$sheet->setCellValue('G'.$count,' '.$value['SERIE']);		
@@ -321,9 +321,9 @@ class Reporte_excel
 		$sheet->setCellValue('J'.$count,$value['QUANTITY']);
 		$sheet->setCellValue('K'.$count,$value['BASE_UOM']);
 		$sheet->setCellValue('L'.$count,$value['EMPLAZAMIENTO']);
-		$sheet->setCellValue('M'.$count,utf8_encode($value['DENOMINACION']));
+		$sheet->setCellValue('M'.$count,$value['DENOMINACION']);
 		$sheet->setCellValue('N'.$count,$value['PERSON_NO']);
-		$sheet->setCellValue('O'.$count,utf8_decode($value['PERSON_NOM']));
+		$sheet->setCellValue('O'.$count,$value['PERSON_NOM']);
 		$sheet->setCellValue('P'.$count,$value['marca']);
 		$sheet->setCellValue('Q'.$count,$value['estado']);
 		$sheet->setCellValue('R'.$count,$value['genero']);
@@ -335,7 +335,7 @@ class Reporte_excel
 		$sheet->setCellValue('X'.$count,$value['ORIG_VALUE']);
 		$sheet->setCellValue('Y'.$count,$value['OBSERVACION']);		
 		$sheet->setCellValue('Z'.$count,$value['BAJAS']);
-		$sheet->setCellValue('AA'.$count,utf8_decode($value['CARACTERISTICA']));
+		$sheet->setCellValue('AA'.$count,$value['CARACTERISTICA']);
 		$sheet->setCellValue('AB'.$count,$value['IMAGEN']);
 		$sheet->setCellValue('AC'.$count,$value['ACTU_POR']);
 		$sheet->setCellValue('AD'.$count,$fechaB);
@@ -522,7 +522,7 @@ class Reporte_excel
 		<td>'.$value['COMPANYCODE'].'</td>
 		<td>'.$value['TAG_SERIE'].'</td>
 		<td>'.$value['SUBNUMBER'].'</td>
-		<td>'.utf8_decode($value['DESCRIPT']).'</td>
+		<td>'.$value['DESCRIPT'].'</td>
 		<td>'.$value['DESCRIPT2'].'</td>
 		<td>'.$value['MODELO'].'</td>		
 		<td>'.' '.$value['SERIE'].'</td>		
@@ -531,9 +531,9 @@ class Reporte_excel
 		<td>'.$value['QUANTITY'].'</td>
 		<td>'.$value['BASE_UOM'].'</td>
 		<td>'.$value['EMPLAZAMIENTO'].'</td>
-		<td>'.utf8_encode($value['DENOMINACION']).'</td>
+		<td>'.$value['DENOMINACION'].'</td>
 		<td>'.$value['PERSON_NO'].'</td>
-		<td>'.utf8_decode($value['PERSON_NOM']).'</td>
+		<td>'.$value['PERSON_NOM'].'</td>
 		<td>'.$value['marca'].'</td>
 		<td>'.$value['estado'].'</td>
 		<td>'.$value['genero'].'</td>
@@ -545,7 +545,7 @@ class Reporte_excel
 		<td>'.$value['ORIG_VALUE'].'</td>
 		<td>'.$value['OBSERVACION'].'</td>		
 		<td>'.$value['BAJAS'].'</td>
-		<td>'.utf8_decode($value['CARACTERISTICA']).'</td>
+		<td>'.$value['CARACTERISTICA'].'</td>
 		<td>'.$value['IMAGEN'].'</td>
 		<td>'.$value['ACTU_POR'].'</td>
 		<td>'.$fechaB.'</td>
@@ -683,7 +683,7 @@ set_time_limit(0);
 			<td>'.$value['COMPANYCODE'].'</td>
 			<td>'.$value['TAG_SERIE'].'</td>
 			<td>'.$value['SUBNUMBER'].'</td>
-			<td>'.utf8_decode($value['DESCRIPT']).'</td>
+			<td>'.$value['DESCRIPT'].'</td>
 			<td>'.$value['DESCRIPT2'].'</td>
 			<td>'.$value['MODELO'].'</td>		
 			<td>'.' '.$value['SERIE'].'</td>		
@@ -692,9 +692,9 @@ set_time_limit(0);
 			<td>'.$value['QUANTITY'].'</td>
 			<td>'.$value['BASE_UOM'].'</td>
 			<td>'.$value['EMPLAZAMIENTO'].'</td>
-			<td>'.utf8_encode($value['DENOMINACION']).'</td>
+			<td>'.$value['DENOMINACION'].'</td>
 			<td>'.$value['PERSON_NO'].'</td>
-			<td>'.utf8_decode($value['PERSON_NOM']).'</td>
+			<td>'.$value['PERSON_NOM'].'</td>
 			<td>'.$value['marca'].'</td>
 			<td>'.$value['estado'].'</td>
 			<td>'.$value['genero'].'</td>
@@ -706,7 +706,7 @@ set_time_limit(0);
 			<td>'.$value['ORIG_VALUE'].'</td>
 			<td>'.$value['OBSERVACION'].'</td>	
 			<td>'.$value['BAJAS'].'</td>
-			<td>'.utf8_decode($value['CARACTERISTICA']).'</td>
+			<td>'.$value['CARACTERISTICA'].'</td>
 			<td>'.$value['IMAGEN'].'</td>
 			<td>'.$value['ACTU_POR'].'</td>
 			<td>'.$fechaB.'</td>
@@ -875,7 +875,7 @@ set_time_limit(0);
 			<td>'.$value['COMPANYCODE'].'</td>
 			<td>'.$value['TAG_SERIE'].'</td>
 			<td>'.$value['SUBNUMBER'].'</td>
-			<td>'.utf8_decode($value['DESCRIPT']).'</td>
+			<td>'.$value['DESCRIPT'].'</td>
 			<td>'.$value['DESCRIPT2'].'</td>
 			<td>'.$value['MODELO'].'</td>		
 			<td>'.' '.$value['SERIE'].'</td>		
@@ -884,9 +884,9 @@ set_time_limit(0);
 			<td>'.$value['QUANTITY'].'</td>
 			<td>'.$value['BASE_UOM'].'</td>
 			<td>'.$value['EMPLAZAMIENTO'].'</td>
-			<td>'.utf8_encode($value['DENOMINACION']).'</td>
+			<td>'.$value['DENOMINACION'].'</td>
 			<td>'.$value['PERSON_NO'].'</td>
-			<td>'.utf8_decode($value['PERSON_NOM']).'</td>
+			<td>'.$value['PERSON_NOM'].'</td>
 			<td>'.$value['marca'].'</td>
 			<td>'.$value['estado'].'</td>
 			<td>'.$value['genero'].'</td>
@@ -898,7 +898,7 @@ set_time_limit(0);
 			<td>'.$value['ORIG_VALUE'].'</td>
 			<td>'.$value['OBSERVACION'].'</td>	
 			<td>'.$value['BAJAS'].'</td>
-			<td>'.utf8_decode($value['CARACTERISTICA']).'</td>
+			<td>'.$value['CARACTERISTICA'].'</td>
 			<td>'.$value['IMAGEN'].'</td>
 			<td>'.$value['ACTU_POR'].'</td>
 			<td>'.$fechaB.'</td>
@@ -1037,7 +1037,7 @@ set_time_limit(0);
 		<td>'.$value['COMPANYCODE'].'</td>
 		<td>'.$value['TAG_SERIE'].'</td>
 		<td>'.$value['SUBNUMBER'].'</td>
-		<td>'.utf8_decode($value['DESCRIPT']).'</td>
+		<td>'.$value['DESCRIPT'].'</td>
 		<td>'.$value['DESCRIPT2'].'</td>
 		<td>'.$value['MODELO'].'</td>		
 		<td>'.' '.$value['SERIE'].'</td>		
@@ -1046,9 +1046,9 @@ set_time_limit(0);
 		<td>'.$value['QUANTITY'].'</td>
 		<td>'.$value['BASE_UOM'].'</td>
 		<td>'.$value['EMPLAZAMIENTO'].'</td>
-		<td>'.utf8_encode($value['DENOMINACION']).'</td>
+		<td>'.$value['DENOMINACION'].'</td>
 		<td>'.$value['PERSON_NO'].'</td>
-		<td>'.utf8_decode($value['PERSON_NOM']).'</td>
+		<td>'.$value['PERSON_NOM'].'</td>
 		<td>'.$value['marca'].'</td>
 		<td>'.$value['estado'].'</td>
 		<td>'.$value['genero'].'</td>
@@ -1060,7 +1060,7 @@ set_time_limit(0);
 		<td>'.$value['ORIG_VALUE'].'</td>
 		<td>'.$value['OBSERVACION'].'</td>		
 		<td>'.$value['BAJAS'].'</td>
-		<td>'.utf8_decode($value['CARACTERISTICA']).'</td>
+		<td>'.$value['CARACTERISTICA'].'</td>
 		<td>'.$value['IMAGEN'].'</td>
 		<td>'.$value['ACTU_POR'].'</td>
 		<td>'.$fechaB.'</td>
@@ -1141,7 +1141,7 @@ set_time_limit(0);
 		<td>'.$value['COMPANYCODE'].'</td>
 		<td>'.$value['TAG_SERIE'].'</td>
 		<td>'.$value['SUBNUMBER'].'</td>
-		<td>'.utf8_decode($value['DESCRIPT']).'</td>
+		<td>'.$value['DESCRIPT'].'</td>
 		<td>'.$value['DESCRIPT2'].'</td>
 		<td>'.$value['MODELO'].'</td>		
 		<td>'.' '.$value['SERIE'].'</td>		
@@ -1150,9 +1150,9 @@ set_time_limit(0);
 		<td>'.$value['QUANTITY'].'</td>
 		<td>'.$value['BASE_UOM'].'</td>
 		<td>'.$value['EMPLAZAMIENTO'].'</td>
-		<td>'.utf8_encode($value['DENOMINACION']).'</td>
+		<td>'.$value['DENOMINACION'].'</td>
 		<td>'.$value['PERSON_NO'].'</td>
-		<td>'.utf8_decode($value['PERSON_NOM']).'</td>
+		<td>'.$value['PERSON_NOM'].'</td>
 		<td>'.$value['marca'].'</td>
 		<td>'.$value['estado'].'</td>
 		<td>'.$value['genero'].'</td>
@@ -1163,7 +1163,7 @@ set_time_limit(0);
 		<td>'.$fechaC.'</td>
 		<td>'.$value['ORIG_VALUE'].'</td>
 		<td>'.$value['OBSERVACION'].'</td>		
-		<td>'.utf8_decode($value['CARACTERISTICA']).'</td>
+		<td>'.$value['CARACTERISTICA'].'</td>
 		<td>'.$value['IMAGEN'].'</td>
 		<td>'.$value['ACTU_POR'].'</td>
 		</tr>';
@@ -1237,7 +1237,7 @@ set_time_limit(0);
 		<td>'.$value['COMPANYCODE'].'</td>
 		<td>'.$value['TAG_SERIE'].'</td>
 		<td>'.$value['SUBNUMBER'].'</td>
-		<td>'.utf8_decode($value['DESCRIPT']).'</td>
+		<td>'.$value['DESCRIPT'].'</td>
 		<td>'.$value['DESCRIPT2'].'</td>
 		<td>'.$value['MODELO'].'</td>		
 		<td>'.' '.$value['SERIE'].'</td>		
@@ -1246,9 +1246,9 @@ set_time_limit(0);
 		<td>'.$value['QUANTITY'].'</td>
 		<td>'.$value['BASE_UOM'].'</td>
 		<td>'.$value['EMPLAZAMIENTO'].'</td>
-		<td>'.utf8_encode($value['DENOMINACION']).'</td>
+		<td>'.$value['DENOMINACION'].'</td>
 		<td>'.$value['PERSON_NO'].'</td>
-		<td>'.utf8_decode($value['PERSON_NOM']).'</td>
+		<td>'.$value['PERSON_NOM'].'</td>
 		<td>'.$value['marca'].'</td>
 		<td>'.$value['estado'].'</td>
 		<td>'.$value['genero'].'</td>
@@ -1259,7 +1259,7 @@ set_time_limit(0);
 		<td>'.$fechaC.'</td>
 		<td>'.$value['ORIG_VALUE'].'</td>
 		<td>'.$value['OBSERVACION'].'</td>		
-		<td>'.utf8_decode($value['CARACTERISTICA']).'</td>
+		<td>'.$value['CARACTERISTICA'].'</td>
 		<td>'.$value['IMAGEN'].'</td>
 		<td>'.$value['ACTU_POR'].'</td>
 		</tr>';
@@ -1344,7 +1344,7 @@ set_time_limit(0);
 		$sheet->setCellValue('A'.$count,$value['COMPANYCODE']);
 		$sheet->setCellValue('B'.$count,$value['TAG_SERIE']);
 		$sheet->setCellValue('C'.$count,$value['SUBNUMBER']);
-		$sheet->setCellValue('D'.$count,utf8_decode($value['DESCRIPT']));
+		$sheet->setCellValue('D'.$count,$value['DESCRIPT']);
 		$sheet->setCellValue('E'.$count,$value['DESCRIPT2']);
 		$sheet->setCellValue('F'.$count,$value['MODELO']);		
 		$sheet->setCellValue('G'.$count,' '.$value['SERIE']);		
@@ -1353,9 +1353,9 @@ set_time_limit(0);
 		$sheet->setCellValue('J'.$count,$value['QUANTITY']);
 		$sheet->setCellValue('K'.$count,$value['BASE_UOM']);
 		$sheet->setCellValue('L'.$count,$value['EMPLAZAMIENTO']);
-		$sheet->setCellValue('M'.$count,utf8_encode($value['DENOMINACION']));
+		$sheet->setCellValue('M'.$count,$value['DENOMINACION']);
 		$sheet->setCellValue('N'.$count,$value['PERSON_NO']);
-		$sheet->setCellValue('O'.$count,utf8_decode($value['PERSON_NOM']));
+		$sheet->setCellValue('O'.$count,$value['PERSON_NOM']);
 		$sheet->setCellValue('P'.$count,$value['marca']);
 		$sheet->setCellValue('Q'.$count,$value['estado']);
 		$sheet->setCellValue('R'.$count,$value['genero']);
@@ -1366,7 +1366,7 @@ set_time_limit(0);
 		$sheet->setCellValue('W'.$count,$fechaC);
 		$sheet->setCellValue('X'.$count,$value['ORIG_VALUE']);
 		$sheet->setCellValue('Y'.$count,$value['OBSERVACION']);		
-		$sheet->setCellValue('Z'.$count,utf8_decode($value['CARACTERISTICA']));
+		$sheet->setCellValue('Z'.$count,$value['CARACTERISTICA']);
 		$sheet->setCellValue('AA'.$count,$value['IMAGEN']);
 		$sheet->setCellValue('AB'.$count,$value['ACTU_POR']);
 		$count = $count+1;
@@ -1888,7 +1888,7 @@ set_time_limit(0);
 		<td>'.$value['COMPANYCODE'].'</td>
 		<td>'.$value['TAG_SERIE'].'</td>
 		<td>'.$value['SUBNUMBER'].'</td>
-		<td>'.utf8_decode($value['DESCRIPT']).'</td>
+		<td>'.$value['DESCRIPT'].'</td>
 		<td>'.$value['DESCRIPT2'].'</td>
 		<td>'.$value['MODELO'].'</td>		
 		<td>'.' '.$value['SERIE'].'</td>		
@@ -1897,9 +1897,9 @@ set_time_limit(0);
 		<td>'.$value['QUANTITY'].'</td>
 		<td>'.$value['BASE_UOM'].'</td>
 		<td>'.$value['EMPLAZAMIENTO'].'</td>
-		<td>'.utf8_encode($value['DENOMINACION']).'</td>
+		<td>'.$value['DENOMINACION'].'</td>
 		<td>'.$value['PERSON_NO'].'</td>
-		<td>'.utf8_decode($value['PERSON_NOM']).'</td>
+		<td>'.$value['PERSON_NOM'].'</td>
 		<td>'.$value['marca'].'</td>
 		<td>'.$value['estado'].'</td>
 		<td>'.$value['genero'].'</td>
@@ -1911,7 +1911,7 @@ set_time_limit(0);
 		<td>'.$value['ORIG_VALUE'].'</td>
 		<td>'.$value['OBSERVACION'].'</td>		
 		<td>'.$value['BAJAS'].'</td>
-		<td>'.utf8_decode($value['CARACTERISTICA']).'</td>
+		<td>'.$value['CARACTERISTICA'].'</td>
 		<td>'.$value['IMAGEN'].'</td>
 		<td>'.$value['ACTU_POR'].'</td>
 		<td>'.$fechaB.'</td>
