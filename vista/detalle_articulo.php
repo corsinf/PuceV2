@@ -508,15 +508,23 @@
       url:   '../controlador/detalle_articuloC.php?guardarArticulo=true',
       type:  'post',
       dataType: 'json',
-        success:  function (response) { 
-        if(response ==1)
+        success:  function (response) {
+        if(response.status ==1)
         {
+          var mensaje = 'Operacion realizada con exito.';
+          if(response.movimientos > 0)
+          {
+            mensaje += ' Se registraron '+response.movimientos+' cambio(s) en el historial de movimientos.';
+          }else
+          {
+            mensaje += ' No se detectaron cambios para registrar como movimiento.';
+          }
           Swal.fire(
             '',
-            'Operacion realizada con exito.',
+            mensaje,
             'success'
           )
-         cargar_datos(id);   
+         cargar_datos(id);
           movimientos();
         }else
         {
@@ -526,7 +534,7 @@
             'error'
           )
 
-        }           
+        }
       }
     });
 

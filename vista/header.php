@@ -79,17 +79,19 @@
 
     function formatoDate(date)
     {
-      var formattedDate = new Date(date); 
-      var d = formattedDate.getDate(); 
-      var m = formattedDate.getMonth(); 
-      m += 1; // javascript months are 0-11
-      if(m<10)
+      if(!date)
       {
-        m = '0'+m;
-      } 
-      var y = formattedDate.getFullYear(); 
+        return '';
+      }
+      var partes = date.split(' ')[0].split('-');
+      if(partes.length<3)
+      {
+        return '';
+      }
+      var y = partes[0];
+      var m = partes[1];
+      var d = partes[2];
       var Fecha = y + "-" + m + "-" + d;
-      console.log(Fecha);
       return Fecha;
     }
      function cerrar_session()
