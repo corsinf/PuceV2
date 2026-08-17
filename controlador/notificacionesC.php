@@ -7,7 +7,7 @@ require_once('../db/codigos_globales.php');
 $controlador = new notificacionesC();
 if(isset($_GET['lista']))
 {
-	echo json_encode($controlador->lista_notificacion($_POST['id']));
+	echo json_encode($controlador->lista_notificacion($_POST['id'] ?? null));
 }
 if(isset($_GET['insertar']))
 {
@@ -28,7 +28,6 @@ class notificacionesC
 	}
 	function lista_notificacion($id)
 	{
-		session_start();
 		$id = $_SESSION['INICIO']['ID_USUARIO'];
         $datos = $this->modelo->lista_notificaciones($id);
 		return $datos;
