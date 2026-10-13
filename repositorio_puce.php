@@ -4,7 +4,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Configuración con el nombre del servidor
-$servidor_imagenes = "\\\\CORS001\\xampp\\htdocs\\img\\";
+// $servidor_imagenes = "\\\\CORS001\\xampp\\htdocs\\img\\";
+$servidor_imagenes = "\\\\CORSINFDB\\xampp\\htdocs\\img\\";
 // Alternativa si solo se comparte la carpeta img
 // $servidor_imagenes = "\\\\CORS001\\img\\";
 
