@@ -184,7 +184,7 @@ class detalle_articuloC
 		$datos = $this->modelo->cargar_datos($id);
 		if(count($datos)>0)
 		{
-			if(!file_exists('//CORS001/xampp/htdocs/img/'.$datos[0]['IMAGEN']))
+			if($datos[0]['IMAGEN']=='' || !file_exists('//CORSINFDB/xampp/htdocs/img/'.$datos[0]['IMAGEN']))
 			{
 				$datos[0]['IMAGEN']='sin_imagen.jpg';
 			}
